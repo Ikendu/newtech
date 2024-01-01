@@ -32,6 +32,24 @@ const MorePage = () => {
           <img src='developers.svg' />
         </div>
       </div>
+      <div className='p-20 pt-24 grid grid-cols-2 gap-16 bg-slate-100'>
+        <div>
+          <img src='services.svg' />
+        </div>
+        <div>
+          <h3 className='text-gray-500 font-bold pb-2'>FOR BUSINESSES</h3>
+          <p className='text-gray-800 font-semibold text-4xl pb-4  leading-snug'>
+            Implement faster with custom software engineering
+          </p>
+          <p className='pb-7 text-gray-800 text-lg'>
+            Use our unique combination of expert consultants, engineering talent, and AI-accelerated
+            delivery for faster project completion.
+          </p>
+          <button className={style + `bg-blue-700  text-slate-200`}>
+            More about Custom Engineering
+          </button>
+        </div>
+      </div>
     </>
   )
 }
