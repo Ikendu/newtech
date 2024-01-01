@@ -50,6 +50,28 @@ const MorePage = () => {
           </button>
         </div>
       </div>
+      <div className='p-20 pt-24 grid grid-cols-2 gap-20 '>
+        <div>
+          <h3 className='text-gray-500 font-bold pb-2'>FOR DEVELOPERS</h3>
+          <p className='text-gray-800 font-semibold text-4xl pb-4  leading-snug'>
+            Get AI-matched to high-paying U.S. tech jobs
+          </p>
+          <p className='pb-7 text-gray-800 text-lg'>
+            Once you pass our vetting process, you’ll enjoy opportunities with top clients who need
+            your expert skills.
+          </p>
+          <button className={style + `bg-blue-700  text-slate-200`}>Apply for Jobs</button>
+        </div>
+        <div>
+          <img src='career.svg' />
+        </div>
+      </div>
+      <div className='p-20  bg-slate-100'>
+        <h2 className='font-semibold text-5xl text-center text-gray-800'>
+          Our global reach and AI help you build faster
+        </h2>
+        <div className='p-20  grid grid-cols-3 gap-10 bg-slate-100'></div>
+      </div>
     </>
   )
 }
