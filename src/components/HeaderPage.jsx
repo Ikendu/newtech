@@ -4,7 +4,7 @@ const HeaderPage = () => {
   const style = 'border p-1.5 px-5 rounded border-blue-500 font-semibold '
   const iconstyle = 'p-1 pt-1.5 border rounded-full border-green-700'
   return (
-    <div className='flex justify-between items-center mb-20'>
+    <div className='flex justify-between items-center mb-16'>
       <div className='flex gap-20 items-center'>
         <h3 className='font-bold text-2xl space-x-40  tracking-widest '>TURING</h3>
         <div className='flex gap-5 text-lg tracking-wide text-gray-600'>
