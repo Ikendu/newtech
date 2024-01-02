@@ -1,9 +1,11 @@
 import {
   ControlIcon,
+  EfficiencyIcon,
   EyeIcon,
   GlobalIcon,
   MatchingIcon,
   PaymentIcon,
+  ThumbIcon,
   VettingIcon,
 } from '../assets/Icons'
 
@@ -142,17 +144,33 @@ const MorePage = () => {
         <h3 className='text-3xl font-semibold text-center pb-20'>Why businesses trust Turing</h3>
         <div className='grid grid-cols-3'>
           <div>
-            <h4>Quality</h4>
+            <h4 className='flex gap-3 items-center text-lg font-semibold text-gray-700'>
+              <div className='p-1 bg-green-50  rounded-md text-green-600 shadow'>
+                <ThumbIcon />
+              </div>
+              Quality
+            </h4>
             <h3>95% trial success rate</h3>
             <p>for smarter, more productive teams</p>
           </div>
           <div>
-            <h4>Efficiency</h4>
+            <h4 className='flex gap-3 items-center text-lg font-semibold text-gray-700'>
+              <div className='p-1 bg-green-50  rounded-md text-green-600 shadow'>
+                <EfficiencyIcon />
+              </div>
+              Efficiency
+            </h4>
             <h3>97% engagement success</h3>
             <p>for accelerated results with greater efficiency</p>
           </div>
           <div>
-            <h4>Expertise</h4>
+            <h4 className='flex gap-3 items-center text-lg font-semibold text-gray-700'>
+              <div className='p-1 bg-green-50  rounded-md text-green-600 shadow'>
+                <EfficiencyIcon />
+              </div>
+              Expertise
+            </h4>
+            <h4></h4>
             <h3>125+ combined years of experience</h3>
             <p>for truly transformational outcomes</p>
           </div>

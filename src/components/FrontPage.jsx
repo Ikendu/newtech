@@ -12,7 +12,7 @@ const FrontPage = () => {
             products with our custom application development and on-demand software engineering.
           </p>
           <div className='pb-10'>
-            <button className={style + `bg-blue-700  text-slate-200  `}>Hire Developers</button>
+            <button className={style + `bg-blue-700  text-slate-200`}>Hire Developers</button>
             <button className={style + `text-blue-600`}>Explore Custom Engineering</button>
           </div>
 
