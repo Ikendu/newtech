@@ -1,4 +1,11 @@
-import { ControlIcon, GlobalIcon, MatchingIcon, PaymentIcon, VettingIcon } from '../assets/Icons'
+import {
+  ControlIcon,
+  EyeIcon,
+  GlobalIcon,
+  MatchingIcon,
+  PaymentIcon,
+  VettingIcon,
+} from '../assets/Icons'
 
 const MorePage = () => {
   const style = 'border mr-3 p-3 px-7 text-lg  rounded border-blue-500 font-semibold '
@@ -73,7 +80,7 @@ const MorePage = () => {
           Our global reach and AI help you build faster
         </h2>
         <div className='grid grid-cols-3 gap-10 '>
-          <div className='bg-white rounded-xl mx-auto p-16 mx-4'>
+          <div className='bg-white rounded-xl p-16 mx-4 shadow-md shadow-slate-500'>
             <div className='p-2 content-center'>
               <img src='./a.svg' />
             </div>
@@ -87,12 +94,12 @@ const MorePage = () => {
               <li className='p-2'>Time zone overlap</li>
             </ul>
           </div>
-          <div className='bg-white rounded-xl mx-auto p-16 p-20'>
+          <div className='bg-white rounded-xl mx-auto p-16 shadow-lg shadow-slate-700'>
             <h3 className='font-semibold text-2xl mb-2 text-center'>
               And use our global developer platform to handle
             </h3>
             <ul className=''>
-              <li className='p-2 bg-blue-50 rounded-xl my-10 font-semibold text-blue-600 text-lg flex gap-2 items-center'>
+              <li className='p-2 bg-blue-50 rounded-xl my-10 font-semibold text-blue-600 text-lg flex gap-2 items-center '>
                 <GlobalIcon />
                 Global Sourcing
               </li>
@@ -110,8 +117,12 @@ const MorePage = () => {
                 <ControlIcon /> Automated On-The-Job Quality Control
               </li>
             </ul>
+            <button className='flex gap-4 bg-blue-600 p-3 rounded-md w-full items-center text-white'>
+              <EyeIcon />
+              See how it works
+            </button>
           </div>
-          <div className='bg-white rounded-xl p-16 mx-4'>
+          <div className='bg-white rounded-xl p-16 mx-4 shadow-md shadow-slate-500'>
             <div className='p-2 content-center'>
               <img src='./a.svg' />
             </div>
@@ -124,6 +135,26 @@ const MorePage = () => {
               <li className='p-2'>Seniority levels</li>
               <li className='p-2'>Time zone overlap</li>
             </ul>
+          </div>
+        </div>
+      </div>
+      <div className='p-10 mx-10'>
+        <h3 className='text-3xl font-semibold text-center pb-20'>Why businesses trust Turing</h3>
+        <div className='grid grid-cols-3'>
+          <div>
+            <h4>Quality</h4>
+            <h3>95% trial success rate</h3>
+            <p>for smarter, more productive teams</p>
+          </div>
+          <div>
+            <h4>Efficiency</h4>
+            <h3>97% engagement success</h3>
+            <p>for accelerated results with greater efficiency</p>
+          </div>
+          <div>
+            <h4>Expertise</h4>
+            <h3>125+ combined years of experience</h3>
+            <p>for truly transformational outcomes</p>
           </div>
         </div>
       </div>
