@@ -7,3 +7,7 @@
     font-stretch: ultra-expanded;
   }
 }
+
+.moveup {
+  margin-top: -580px;
+}

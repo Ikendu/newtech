@@ -1,6 +1,7 @@
 import {
   ControlIcon,
   EfficiencyIcon,
+  ExpertIcon,
   EyeIcon,
   GlobalIcon,
   MatchingIcon,
@@ -10,7 +11,11 @@ import {
 } from '../assets/Icons'
 
 const MorePage = () => {
-  const style = 'border mr-3 p-3 px-7 text-lg  rounded border-blue-500 font-semibold '
+  const styleButton = 'border mr-3 p-3 px-7 text-lg  rounded border-blue-500 font-semibold '
+  const style2 = 'py-5 text-4xl font-semibold text-green-500'
+  const style3 = 'text-lg'
+  const style4 = 'text-6xl font-semibold py-4 '
+
   return (
     <>
       <div className='w-full mt-10 pt-10 pb-8 bg-gray-50 text-gray-800 text-center items-center '>
@@ -37,7 +42,7 @@ const MorePage = () => {
           <p className='pb-7 text-gray-800 text-lg'>
             Quickly and efficiently build your engineering team with our deeply vetted talent.
           </p>
-          <button className={style + `bg-blue-700  text-slate-200`}>Hire Developers</button>
+          <button className={styleButton + `bg-blue-700  text-slate-200`}>Hire Developers</button>
         </div>
         <div>
           <img src='developers.svg' />
@@ -56,7 +61,7 @@ const MorePage = () => {
             Use our unique combination of expert consultants, engineering talent, and AI-accelerated
             delivery for faster project completion.
           </p>
-          <button className={style + `bg-blue-700  text-slate-200`}>
+          <button className={styleButton + `bg-blue-700  text-slate-200`}>
             More about Custom Engineering
           </button>
         </div>
@@ -71,7 +76,7 @@ const MorePage = () => {
             Once you pass our vetting process, you’ll enjoy opportunities with top clients who need
             your expert skills.
           </p>
-          <button className={style + `bg-blue-700  text-slate-200`}>Apply for Jobs</button>
+          <button className={styleButton + `bg-blue-700  text-slate-200`}>Apply for Jobs</button>
         </div>
         <div>
           <img src='career.svg' />
@@ -101,7 +106,7 @@ const MorePage = () => {
               And use our global developer platform to handle
             </h3>
             <ul className=''>
-              <li className='p-2 bg-blue-50 rounded-xl my-10 font-semibold text-blue-600 text-lg flex gap-2 items-center '>
+              <li className='p-2 bg-blue-50 rounded-xl my-4 font-semibold text-blue-600 text-lg flex gap-2 items-center '>
                 <GlobalIcon />
                 Global Sourcing
               </li>
@@ -109,13 +114,13 @@ const MorePage = () => {
                 <VettingIcon />
                 Itelligent Vet ting
               </li>
-              <li className='p-2 bg-blue-50 rounded-xl my-10 font-semibold text-blue-600 text-lg flex gap-2 items-center'>
+              <li className='p-2 bg-blue-50 rounded-xl my-4 font-semibold text-blue-600 text-lg flex gap-2 items-center'>
                 <MatchingIcon /> Extensive Matching
               </li>
-              <li className='p-2 bg-blue-50 rounded-xl my-10 font-semibold text-blue-600 text-lg flex gap-2 items-center'>
+              <li className='p-2 bg-blue-50 rounded-xl my-4 font-semibold text-blue-600 text-lg flex gap-2 items-center'>
                 <PaymentIcon /> Payments Compliance
               </li>
-              <li className='p-2 bg-blue-50 rounded-xl my-10 font-semibold text-blue-600 text-lg flex gap-2 '>
+              <li className='p-2 bg-blue-50 rounded-xl my-4 font-semibold text-blue-600 text-lg flex gap-2 '>
                 <ControlIcon /> Automated On-The-Job Quality Control
               </li>
             </ul>
@@ -142,7 +147,7 @@ const MorePage = () => {
       </div>
       <div className='p-10 mx-10'>
         <h3 className='text-3xl font-semibold text-center pb-20'>Why businesses trust Turing</h3>
-        <div className='grid grid-cols-3'>
+        <div className='grid grid-cols-3 px-16 gap-10'>
           <div>
             <h4 className='flex gap-3 items-center text-lg font-semibold text-gray-700'>
               <div className='p-1 bg-green-50  rounded-md text-green-600 shadow'>
@@ -150,8 +155,8 @@ const MorePage = () => {
               </div>
               Quality
             </h4>
-            <h3>95% trial success rate</h3>
-            <p>for smarter, more productive teams</p>
+            <h3 className={style2}>95% trial success rate</h3>
+            <p className={style3}>for smarter, more productive teams</p>
           </div>
           <div>
             <h4 className='flex gap-3 items-center text-lg font-semibold text-gray-700'>
@@ -160,19 +165,48 @@ const MorePage = () => {
               </div>
               Efficiency
             </h4>
-            <h3>97% engagement success</h3>
-            <p>for accelerated results with greater efficiency</p>
+            <h3 className={style2}>97% engagement success</h3>
+            <p className={style3}>for accelerated results with greater efficiency</p>
           </div>
           <div>
             <h4 className='flex gap-3 items-center text-lg font-semibold text-gray-700'>
               <div className='p-1 bg-green-50  rounded-md text-green-600 shadow'>
-                <EfficiencyIcon />
+                <ExpertIcon />
               </div>
               Expertise
             </h4>
             <h4></h4>
-            <h3>125+ combined years of experience</h3>
-            <p>for truly transformational outcomes</p>
+            <h3 className={style2}>125+ combined years of experience</h3>
+            <p className={style3}>for truly transformational outcomes</p>
+          </div>
+        </div>
+      </div>
+      <div className='w-full '>
+        <img className='w-full' src='./bg.jpg' />
+        <div className='text-white px-20 moveup'>
+          <div className='text-5xl '>
+            <p className='py-2'>3 million+ developers </p>
+            <p className='py-2'>from 150 countries </p>
+            <p className='py-2'>have already joined Turing</p>
+          </div>
+          <div className='flex gap-20 py-5 mb-24 mt-10'>
+            <div>
+              <h3 className={style4}>15+</h3>
+              <p className='text-2xl'>Job types</p>
+            </div>
+            <div>
+              <h3 className={style4}>100+</h3>
+              <p className='text-2xl'>Technologies</p>
+            </div>
+            <div>
+              <h3 className={style4}>7+</h3>
+              <p className='text-2xl'>Seniority levelss</p>
+            </div>
+          </div>
+
+          <div className='flex gap-3'>
+            <button className={styleButton + `bg-white text-blue-600`}>Hire Developers</button>
+            <button className={styleButton}>Apply for Jobs</button>
           </div>
         </div>
       </div>
