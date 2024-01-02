@@ -92,7 +92,7 @@ const MorePage = () => {
               <img src='./a.svg' />
             </div>
             <h3 className='font-semibold text-xl mb-2'>We take your specific requirements</h3>
-            <ul>
+            <ul className='list -ml-5'>
               <li className='p-2'>Project scope</li>
               <li className='p-2'>Roles</li>
               <li className='p-2'>Tech stacks</li>
@@ -134,7 +134,7 @@ const MorePage = () => {
               <img src='./a.svg' />
             </div>
             <h3 className='font-semibold text-xl mb-2'>We take your specific requirements</h3>
-            <ul>
+            <ul className='list'>
               <li className='p-2'>Project scope</li>
               <li className='p-2'>Roles</li>
               <li className='p-2'>Tech stacks</li>
@@ -189,7 +189,7 @@ const MorePage = () => {
             <p className='py-2'>from 150 countries </p>
             <p className='py-2'>have already joined Turing</p>
           </div>
-          <div className='flex gap-20 py-5 mb-24 mt-10'>
+          <div className='flex gap-20 py-5 mb-20 mt-5'>
             <div>
               <h3 className={style4}>15+</h3>
               <p className='text-2xl'>Job types</p>
@@ -208,6 +208,23 @@ const MorePage = () => {
             <button className={styleButton + `bg-white text-blue-600`}>Hire Developers</button>
             <button className={styleButton}>Apply for Jobs</button>
           </div>
+        </div>
+      </div>
+
+      <div className='p-20 pt-40 grid grid-cols-2 gap-10 bg-slate-100'>
+        <div className=''>
+          <img src='c.svg' />
+        </div>
+        <div>
+          <p className='text-gray-800 font-semibold text-4xl py-4  leading-snug'>
+            Why are the best developers joining Turing? They want careers, not gigs.
+          </p>
+          <ul className='py-10 list'>
+            <li className='py-3 text-2xl'>Vetted once, eligible for life</li>
+            <li className='py-3 text-2xl'>Exclusive Turing developer success support</li>
+            <li className='py-3 text-2xl'>Income stability thanks to 99% rematch rate</li>
+          </ul>
+          <button className={styleButton + `bg-blue-700  text-slate-200`}>Apply for Jobs</button>
         </div>
       </div>
     </>

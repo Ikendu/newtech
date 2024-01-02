@@ -1,6 +1,7 @@
 import FrontPage from './components/FrontPage'
 import HeaderPage from './components/HeaderPage'
 import MorePage from './components/MorePage'
+import ReviewPage from './components/ReviewPage'
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <FrontPage />
       </div>
       <MorePage />
+      <ReviewPage />
     </div>
   )
 }

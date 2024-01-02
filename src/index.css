@@ -11,3 +11,6 @@
 .moveup {
   margin-top: -580px;
 }
+.list {
+  list-style-type: disc;
+}
