@@ -6,13 +6,10 @@ const HeaderPage = () => {
   const [small, setSmall] = useState(false)
 
   useEffect(() => {
-    if (window.scrollY) window.addEventListener(`scroll`, () => setSmall(window.scrollY > 200))
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', () => setSmall(window.scrollY > 200))
+    }
   }, [])
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     window.addEventListener('scroll', () => setSmall(window.scrollY > 200))
-  //   }
-  // }, [])
   const style = 'border p-1.5 px-5 rounded border-blue-500 font-semibold '
   const iconstyle = 'p-1 pt-1.5 border rounded-full border-green-700'
   const headerStyle = 'flex justify-between fixed bg-white w-full top-0 px-20 py-6'
