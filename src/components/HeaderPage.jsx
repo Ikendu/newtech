@@ -7,12 +7,13 @@ const iconstyle = 'px-1 py-1.5 border rounded-full border-blue-500'
 const headerStyle = 'flex justify-between fixed bg-white w-full top-0 px-20 py-6'
 const smallStyle =
   'flex justify-between fixed bg-white w-full top-0 px-20 py-3 shadow-md shadow-gray-400 transition duration-700 ease-in-out'
-const dropStyle = 'p-2 border-b flex justify-between items-center gap-5'
+const dropStyle = 'p-2 border-b-2 flex justify-between items-center gap-5'
 
 const HeaderPage = () => {
   const [small, setSmall] = useState(false)
   const [play, setPlay] = useState(<PlayIcon />)
   const [play2, setPlay2] = useState(<PlayIcon />)
+  const [display1, setDisplay1] = useState(false)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -25,15 +26,41 @@ const HeaderPage = () => {
       <div className='flex gap-20 items-center   '>
         <h3 className='font-bold text-2xl space-x-40  tracking-widest'>TURING</h3>
         <div className='flex gap-5 text-lg tracking-wide text-gray-600'>
-          <div className='flex gap-1 items-center'>
+          <div
+            className='flex gap-1 items-center'
+            onMouseEnter={() => {
+              setPlay(<PlayIconUp />)
+              setDisplay1(true)
+            }}
+            onMouseLeave={() => {
+              setPlay(<PlayIcon />)
+              setDisplay1(false)
+            }}
+          >
             Explore Services
-            <div
-              className={iconstyle}
-              onMouseEnter={() => setPlay(<PlayIconUp />)}
-              onMouseLeave={() => setPlay(<PlayIcon />)}
-            >
-              {play}
-            </div>
+            <div className={iconstyle}>{play}</div>
+            {display1 && (
+              <div className='absolute bg-white top-14 p-3 border-gray-300 border-2 rounded-md text-lg text-gray-600'>
+                <ul className='items-center'>
+                  <li className={dropStyle}>
+                    AI Services <ArrowIcon />
+                  </li>
+
+                  <li className={dropStyle}>
+                    Cloud Services <ArrowIcon />
+                  </li>
+                  <li className={dropStyle}>
+                    Application Engineering Services <ArrowIcon />
+                  </li>
+                  <li className={dropStyle}>
+                    Managed Team <ArrowIcon />
+                  </li>
+                  <li className={`${dropStyle} + border-none`}>
+                    Generative AI Services <ArrowIcon />
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
           <p>Explore Developers</p>
           <p>Explore Jobs</p>
@@ -54,27 +81,8 @@ const HeaderPage = () => {
           </div>
         </div>
       </div>
-      <div className='absolute bg-white top-16 p-3 border rounded-md'>
-        <ul>
-          <li className={dropStyle}>
-            AI Services <ArrowIcon />
-          </li>
-
-          <li className={dropStyle}>
-            Cloud Services <ArrowIcon />
-          </li>
-          <li className={dropStyle}>
-            Application Engineering Services <ArrowIcon />
-          </li>
-          <li className={dropStyle}>
-            Managed Team <ArrowIcon />
-          </li>
-          <li className={dropStyle}>
-            Generative AI Services <ArrowIcon />
-          </li>
-        </ul>
-      </div>
     </header>
   )
 }
+
 export default HeaderPage
