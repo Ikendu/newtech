@@ -1,7 +1,17 @@
+import {
+  FaceBookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  OfficeIcon,
+  XIcon,
+  YouTubeIcon,
+} from '../assets/Icons'
+
 const HireDevPage = () => {
   const styleButton = 'border mr-3 p-3 px-7 text-lg  rounded border-blue-500 font-semibold'
-  const style = 'text-lg font-semibold pb-4'
+  const style0 = 'text-lg font-semibold pb-4'
   const style1 = 'text-gray-400 grid grid-flow-row gap-3'
+  const iconStyle = 'bg-gray-400 p-2 rounded-full p'
 
   return (
     <div className='text-gray-100'>
@@ -19,7 +29,7 @@ const HireDevPage = () => {
               <h2 className=' p-20 text-3xl'>TURING</h2>
             </div>
             <div className='p-16'>
-              <h3 className={style}>Companies</h3>
+              <h3 className={style0}>Companies</h3>
               <ul className={style1}>
                 <li>Hire Developers</li>
                 <li>Book a Call</li>
@@ -33,7 +43,7 @@ const HireDevPage = () => {
               </ul>
             </div>
             <div className='p-16'>
-              <h3 className={style}>Developers</h3>
+              <h3 className={style0}>Developers</h3>
               <ul className={style1}>
                 <li>Apply for Jobs</li>
                 <li>Developer Login</li>
@@ -45,7 +55,7 @@ const HireDevPage = () => {
               </ul>
             </div>
             <div className='p-16'>
-              <h3 className={style}>Company</h3>
+              <h3 className={style0}>Company</h3>
               <ul className={style1}>
                 <li>Blog</li>
                 <li>Press</li>
@@ -54,7 +64,7 @@ const HireDevPage = () => {
               </ul>
             </div>
             <div className='p-16'>
-              <h3 className={style}>Contact</h3>
+              <h3 className={style0}>Contact</h3>
               <ul className={style1}>
                 <li>Contact Us</li>
                 <li>Help Center</li>
@@ -66,11 +76,49 @@ const HireDevPage = () => {
             <div></div>
             <div></div>
           </div>
-          <div className='bg-black '>
-            <div>2024 Turing</div>
-            <p>900 Embarcadero Road Palo Alto, CA, 94303</p>
-            <div></div>
-            <div></div>
+          <div className='bg-black p-5 px-10 grid grid-cols-3 text-gray-300'>
+            <div className='flex gap-2 items-center'>
+              <div className=''>
+                <OfficeIcon />
+              </div>
+              <div>
+                <h3>2024 Turing</h3>
+                <p className='text-xs'>900 Embarcadero Road Palo Alto, CA, 94303</p>
+              </div>
+            </div>
+            <div className='flex gap-3'>
+              <div className={iconStyle}>
+                <FaceBookIcon />
+              </div>
+              <div className={iconStyle}>
+                <XIcon />
+              </div>
+              <div className={iconStyle}>
+                <LinkedInIcon />
+              </div>
+              <div className={iconStyle}>
+                <InstagramIcon />
+              </div>
+              <div className={iconStyle}>
+                <YouTubeIcon />
+              </div>
+            </div>
+            <div>
+              <ul className='flex gap-4 items-center text-sm text-gray-300'>
+                <a href='#'>
+                  <li>Sitemap</li>
+                </a>
+                <a href='#'>
+                  <li>Terms of Service</li>
+                </a>
+                <a href='#'>
+                  <li>Privacy Policy</li>
+                </a>
+                <a href='#'>
+                  <li>Privacy Settings</li>
+                </a>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>

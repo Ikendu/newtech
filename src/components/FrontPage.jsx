@@ -1,8 +1,8 @@
 const FrontPage = () => {
   const style = 'border mr-3 p-3 px-7 text-lg  rounded border-blue-500 font-semibold '
   return (
-    <>
-      <div className='flex text-gray-800'>
+    <div className='mx-20 my-16 pt-16'>
+      <div className='flex text-gray-800 '>
         <div className=''>
           <h1 className='font-semibold text-5xl leading-snug mb-6  '>
             The world’s first AI-powered tech services company
@@ -25,7 +25,7 @@ const FrontPage = () => {
           <img src='./1.JPG' />
         </div>
       </div>
-    </>
+    </div>
   )
 }
 export default FrontPage
