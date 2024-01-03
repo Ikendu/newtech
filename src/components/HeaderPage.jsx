@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { PlayIcon, PlayIconUp } from '../assets/Icons'
+import { ArrowIcon, PlayIcon, PlayIconUp } from '../assets/Icons'
 import { useEffect } from 'react'
 
 const style = 'border p-1.5 px-5 rounded border-blue-500 font-semibold '
@@ -7,6 +7,7 @@ const iconstyle = 'px-1 py-1.5 border rounded-full border-blue-500'
 const headerStyle = 'flex justify-between fixed bg-white w-full top-0 px-20 py-6'
 const smallStyle =
   'flex justify-between fixed bg-white w-full top-0 px-20 py-3 shadow-md shadow-gray-400 transition duration-700 ease-in-out'
+const dropStyle = 'p-2 border-b flex justify-between items-center gap-5'
 
 const HeaderPage = () => {
   const [small, setSmall] = useState(false)
@@ -52,6 +53,26 @@ const HeaderPage = () => {
             {play2}
           </div>
         </div>
+      </div>
+      <div className='absolute bg-white top-16 p-3 border rounded-md'>
+        <ul>
+          <li className={dropStyle}>
+            AI Services <ArrowIcon />
+          </li>
+
+          <li className={dropStyle}>
+            Cloud Services <ArrowIcon />
+          </li>
+          <li className={dropStyle}>
+            Application Engineering Services <ArrowIcon />
+          </li>
+          <li className={dropStyle}>
+            Managed Team <ArrowIcon />
+          </li>
+          <li className={dropStyle}>
+            Generative AI Services <ArrowIcon />
+          </li>
+        </ul>
       </div>
     </header>
   )
