@@ -8,12 +8,15 @@ const headerStyle = 'flex justify-between fixed bg-white w-full top-0 px-20 py-6
 const smallStyle =
   'flex justify-between fixed bg-white w-full top-0 px-20 py-3 shadow-md shadow-gray-400 transition duration-700 ease-in-out'
 const dropStyle = 'p-2 border-b-2 flex justify-between items-center gap-5'
+const dropList =
+  'absolute bg-white top-14 p-3 border-gray-300 border-2 rounded-md text-lg text-gray-600  '
 
 const HeaderPage = () => {
   const [small, setSmall] = useState(false)
   const [play, setPlay] = useState(<PlayIcon />)
   const [play2, setPlay2] = useState(<PlayIcon />)
-  const [display1, setDisplay1] = useState(false)
+  const [display1, setDisplay1] = useState(`hidden`)
+  const [color, setColor] = useState(false)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -27,40 +30,40 @@ const HeaderPage = () => {
         <h3 className='font-bold text-2xl space-x-40  tracking-widest'>TURING</h3>
         <div className='flex gap-5 text-lg tracking-wide text-gray-600'>
           <div
-            className='flex gap-1 items-center'
+            className={`flex gap-1 items-center ${color && `text-blue-500`}`}
             onMouseEnter={() => {
               setPlay(<PlayIconUp />)
-              setDisplay1(true)
+              setDisplay1(`block`)
+              setColor(true)
             }}
             onMouseLeave={() => {
               setPlay(<PlayIcon />)
-              setDisplay1(false)
+              setDisplay1(`hidden`)
+              setColor(false)
             }}
           >
             Explore Services
             <div className={iconstyle}>{play}</div>
-            {display1 && (
-              <div className='absolute bg-white top-14 p-3 border-gray-300 border-2 rounded-md text-lg text-gray-600'>
-                <ul className='items-center'>
-                  <li className={dropStyle}>
-                    AI Services <ArrowIcon />
-                  </li>
+            <div className={dropList + display1}>
+              <ul className='items-center '>
+                <li className={dropStyle}>
+                  AI Services <ArrowIcon />
+                </li>
 
-                  <li className={dropStyle}>
-                    Cloud Services <ArrowIcon />
-                  </li>
-                  <li className={dropStyle}>
-                    Application Engineering Services <ArrowIcon />
-                  </li>
-                  <li className={dropStyle}>
-                    Managed Team <ArrowIcon />
-                  </li>
-                  <li className={`${dropStyle} + border-none`}>
-                    Generative AI Services <ArrowIcon />
-                  </li>
-                </ul>
-              </div>
-            )}
+                <li className={dropStyle}>
+                  Cloud Services <ArrowIcon />
+                </li>
+                <li className={dropStyle}>
+                  Application Engineering Services <ArrowIcon />
+                </li>
+                <li className={dropStyle}>
+                  Managed Team <ArrowIcon />
+                </li>
+                <li className={`${dropStyle} + border-none`}>
+                  Generative AI Services <ArrowIcon />
+                </li>
+              </ul>
+            </div>
           </div>
           <p>Explore Developers</p>
           <p>Explore Jobs</p>
