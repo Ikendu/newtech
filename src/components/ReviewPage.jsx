@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { ArrowUpIcon, HeartIcon, NextIcon, PrevIcon } from '../assets/Icons'
 import { slides } from './lists'
 
 const slideIconStyle =
-  'absolute top-[50%] p-2 bg-black/20 text-white cursor-pointer rounded-full hidden group-hover:block'
+  'absolute top-[50%] p-2 bg-black text-white cursor-pointer rounded-full hidden group-hover:block'
 const indecator = `text-blue-500`
 const indecator1 = `text-gray-700`
 
@@ -24,12 +24,6 @@ const ReviewPage = () => {
   const getSlide = (currIndex) => {
     setCurrIndex(currIndex)
   }
-
-  useEffect(() => {
-    setInterval(() => {
-      nextSlide()
-    }, 3000)
-  }, [nextSlide])
 
   return (
     <div className='bg-gray-200 p-20'>
@@ -54,9 +48,12 @@ const ReviewPage = () => {
       <div className='pt-8 max-w-[700px] h-[400px] w-full m-auto px-4 relative group'>
         <div
           style={{ backgroundImage: `url(${slides[currIndex].url})` }}
-          className='w-full h-full bg-center bg-cover  duration-400 rounded-2xl  '
-        >
-          hello we can write here
+          className='w-full h-full bg-center bg-cover  duration-400 rounded-2xl opacity-50'
+        ></div>
+        <div className='absolute top-[50%] text-center w-full text-xl font-semibold italic'>
+          {slides.map((slide, idx) => (
+            <div key={idx}>{currIndex == idx && slide.review}</div>
+          ))}
         </div>
         <div className={`${slideIconStyle} left-0`} onClick={prevSlide}>
           <PrevIcon />
