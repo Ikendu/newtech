@@ -1,4 +1,9 @@
+import { useState } from 'react'
+
 const FrontPage = () => {
+  const [blueButton, setBlueButton] = useState(``)
+  const [whiteButton, setWhiteButton] = useState(``)
+
   const style = 'border mr-3 p-3 px-7 text-lg  rounded border-blue-500 font-semibold '
   return (
     <div className='mx-20 my-16 pt-16'>
@@ -12,8 +17,20 @@ const FrontPage = () => {
             products with our custom application development and on-demand software engineering.
           </p>
           <div className='pb-10'>
-            <button className={style + `bg-blue-700  text-slate-200`}>Hire Developers</button>
-            <button className={style + `text-blue-600`}>Explore Custom Engineering</button>
+            <button
+              onMouseEnter={() => setBlueButton(`bg-blue-800`)}
+              className={`${style}text-white bg-blue-600 ${blueButton}`}
+              onMouseLeave={() => setBlueButton(``)}
+            >
+              Hire Developers
+            </button>
+            <button
+              onMouseEnter={() => setWhiteButton(`bg-gray-100`)}
+              className={`${style} text-blue-600  ${whiteButton}`}
+              onMouseLeave={() => setWhiteButton(``)}
+            >
+              Explore Custom Engineering
+            </button>
           </div>
 
           <p>

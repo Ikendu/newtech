@@ -1,4 +1,5 @@
 import { HeartIcon } from '../assets/Icons'
+import { slides } from './lists'
 
 const ReviewPage = () => {
   return (
@@ -21,8 +22,12 @@ const ReviewPage = () => {
           <p className='text-sm text-gray-600'>based on developer reviews as of November 2023</p>
         </div>
       </div>
-      <div></div>
-      <div></div>
+      <div className='pt-8 max-w-[500px] h-[300px] w-full m-auto px-4 relative'>
+        <div
+          style={{ backgroundImage: `url(${slides[0].url})` }}
+          className='w-full h-full bg-center bg-cover duration-500 rounded-2xl'
+        ></div>
+      </div>
     </div>
   )
 }

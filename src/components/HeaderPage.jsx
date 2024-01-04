@@ -20,6 +20,8 @@ const HeaderPage = () => {
   const [display, setDisplay] = useState(`hidden`)
   const [display1, setDisplay1] = useState(`hidden`)
   const [color, setColor] = useState(false)
+  const [blueButton, setBlueButton] = useState(``)
+  const [whiteButton, setWhiteButton] = useState(``)
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -28,7 +30,7 @@ const HeaderPage = () => {
   }, [])
 
   return (
-    <header className={small ? smallStyle : headerStyle}>
+    <header className={small ? smallStyle : headerStyle} style={{ zIndex: 10 }}>
       <div className='flex gap-20 items-center '>
         <h3 className='font-bold text-2xl space-x-40  tracking-widest'>TURING</h3>
         <div className='flex gap-5 text-lg tracking-wide text-gray-600'>
@@ -70,8 +72,20 @@ const HeaderPage = () => {
       </div>
 
       <div className='flex gap-3'>
-        <button className={style + 'text-blue-600'}>Apply for Jobs</button>
-        <button className={style + ' text-white bg-blue-600'}>Hire Developers</button>
+        <button
+          onMouseEnter={() => setWhiteButton(`bg-gray-100`)}
+          className={`${style} text-blue-600 ${whiteButton}`}
+          onMouseLeave={() => setWhiteButton(``)}
+        >
+          Apply for Jobs
+        </button>
+        <button
+          onMouseEnter={() => setBlueButton(`bg-blue-800`)}
+          className={`${style}text-white bg-blue-600 ${blueButton}`}
+          onMouseLeave={() => setBlueButton(``)}
+        >
+          Hire Developers
+        </button>
         <div
           onMouseEnter={() => {
             setPlay2(<PlayIconUp />)
