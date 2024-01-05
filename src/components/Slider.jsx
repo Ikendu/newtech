@@ -7,11 +7,13 @@ import Slider from 'react-slick'
 const Slider1 = () => {
   var settings = {
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     initialSlide: 0,
+    autoplay: true,
+    autoplaySpeed: 2000,
     responsive: [
       {
         breakpoint: 1024,
@@ -40,7 +42,7 @@ const Slider1 = () => {
     ],
   }
   return (
-    <div className='m-10'>
+    <div className='m-16'>
       <Slider {...settings}>
         {slides.map((slide, idx) => {
           return (
