@@ -17,3 +17,9 @@ export const slides = [
   { url: `b.svg`, review: `Here allows me to spend quality time with family` },
   { url: `c.svg`, review: `here payment is timely` },
 ]
+
+export const slides2 = [
+  { url: `abstract01.jpg`, review: `I love this plateform` },
+  { url: `abstract02.jpg`, review: `Alot of money here` },
+  { url: `abstract03.jpg`, review: `I get more work done here in less time` },
+]
