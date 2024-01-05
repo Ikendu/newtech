@@ -1,5 +1,6 @@
 import { HeartIcon } from '../assets/Icons'
 import { SlidePage } from './SlidePage'
+import Slider from './Slider'
 
 const ReviewPage = () => {
   return (
@@ -23,6 +24,7 @@ const ReviewPage = () => {
         </div>
       </div>
       <SlidePage />
+      <Slider />
     </div>
   )
 }

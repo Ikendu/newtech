@@ -1,5 +1,8 @@
 import { slides } from './lists'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 const Slider = () => {
   var settings = {
     dots: true,
@@ -38,7 +41,14 @@ const Slider = () => {
   return (
     <div>
       {slides.map((slide, idx) => {
-        return <div key={idx}>{slide.url}</div>
+        return (
+          <div key={idx}>
+            <div className=''>
+              <img className='rounded-2xl' src={slide.url} />
+            </div>
+            <div>{slide.review}</div>
+          </div>
+        )
       })}
     </div>
   )
