@@ -1,36 +1,21 @@
 import Slider from 'react-slick'
 import { slides2 } from './lists'
 
-const Slide2 = () => {
-  const settings = {
-    customPaging: function (i) {
-      return (
-        <a>
-          <img src={`abstract0${i + 1}.jpg`} />
-        </a>
-      )
-    },
-    dots: true,
-    dotsClass: 'slick-dots slick-thumb',
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  }
+import 'react-responsive-carousel/lib/styles/carousel.min.css' // requires a loader
+import { Carousel } from 'react-responsive-carousel'
 
+const Slide2 = () => {
   return (
     <div>
-      <Slider {...settings}>
+      <Carousel>
         {slides2.map((slide, idx) => {
           return (
             <div key={idx}>
-              <div>
-                <img src={slide.url} />
-              </div>
+              <img src={slide.url} />
             </div>
           )
         })}
-      </Slider>
+      </Carousel>
     </div>
   )
 }

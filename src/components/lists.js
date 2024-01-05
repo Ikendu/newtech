@@ -22,4 +22,5 @@ export const slides2 = [
   { url: `abstract01.jpg`, review: `I love this plateform` },
   { url: `abstract02.jpg`, review: `Alot of money here` },
   { url: `abstract03.jpg`, review: `I get more work done here in less time` },
+  { url: `abstract04.jpg`, review: `Here allows me to spend quality time with family` },
 ]
